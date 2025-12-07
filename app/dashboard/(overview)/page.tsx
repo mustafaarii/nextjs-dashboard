@@ -7,14 +7,9 @@ import { Suspense } from 'react';
 import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
 import CardWrapper from '@/app/ui/dashboard/cards';
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
-
-
-    const fetchData = await fetch(`https://jsonplaceholder.typicode.com/todos/${Math.floor(Math.random() * 6) + 1}`, {
-        cache: 'no-store'
-    })
-        .then(response => response.json())
-        .then(json => json)
 
     return (
         <main>
